@@ -1,0 +1,222 @@
+@font-face {
+    font-family: "Angular";
+    src: url("Assets/Fonts/Angular.woff") format("woff"), url("Assets/Fonts/Angular.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Rounded";
+    src: url("Assets/Fonts/TypoAngularRoundedDemo.woff") format("woff"), url("Assets/Fonts/TypoAngularRoundedDemo.woff2") format("woff2");
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100vh;
+    cursor: url("Assets/Cursors/paw.png"), auto;
+    user-select: none;
+}
+
+body {
+    margin: 0;
+    background: radial-gradient(#2984da, #123352);
+    background-size: cover;
+}
+
+.page-title {
+    color: #aed0f0;
+    font-family: Angular;
+    font-size: 5em;
+    text-align: center;
+    font-weight: normal;
+}
+
+.game-info-container {
+    grid-column: 1/-1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.game-container {
+    display: grid;
+    margin: 20px;
+    justify-content: center;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 10px;
+    perspective: 500px;
+    /*the user is 500 px away from the game container when the rotation is madde*/
+}
+
+.game-info {
+    color: #aed0f0;
+    font-family: Rounded;
+    font-size: 1.5em;
+}
+
+.card {
+    position: relative;
+    width: 140px;
+    height: 190px;
+}
+
+.card:hover {
+    cursor: url("Assets/Cursors/pawHover.png"), auto;
+}
+
+.card-front {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    backface-visibility: hidden;
+    border: 1.5px solid #aaccffff;
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+    transition: transform 500ms ease-in-out;
+}
+
+.card.visible .card-back {
+    transform: rotateY(-180deg);
+}
+
+.card.visible .card-face {
+    transform: rotateY(0);
+}
+
+.overlay-text {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    color: #aed0f0;
+    font-family: Angular;
+}
+
+.overlay-text-small {
+    font-family: Rounded;
+    font-size: .35em;
+}
+
+.overlay-text.visible {
+    display: flex;
+    flex-direction: column;
+    animation: overlay-expand 500ms forwards;
+}
+
+@keyframes overlay-expand {
+    from {
+        background-color: #00000000;
+        font-size: 0;
+    }
+    to {
+        font-size: 10em;
+        background-color: #000000c9;
+    }
+}
+
+
+/* .card.matched .card-value {
+    animation: tilt 2s linear infinite 500ms;
+}
+
+@keyframes tilt {
+    0%,
+    100% {
+        transform: rotate(0);
+    }
+    25% {
+        transform: rotate(-10deg);
+    }
+    75% {
+        transform: rotate(10deg);
+    }
+} */
+
+.card-back {
+    border-color: #aaccffff;
+    background-color: #112335;
+}
+
+.card-face {
+    border-color: #4e3418ff;
+    background-color: #d9c4aeff;
+    transform: rotateY(180deg);
+}
+
+.card-value {
+    width: 100px;
+    transition: transform 100ms ease-in-out;
+}
+
+.card-face:hover .card-value {
+    transform: scale(1.1);
+}
+
+.triangle {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    transition: width 100ms, ease-in-out, height 100ms ease-in-out;
+}
+
+.card-front:hover .triangle {
+    width: 70px;
+    height: 70px;
+}
+
+.triangle-top-left {
+    transform: translate(-35px, -35px);
+    top: 0;
+    left: 0;
+}
+
+.triangle-top-right {
+    transform: rotate(90deg) translate(-35px, -35px);
+    top: 0;
+    right: 0;
+}
+
+.triangle-bottom-left {
+    transform: rotate(-90deg) translate(-35px, -35px);
+    bottom: 0;
+    left: 0;
+}
+
+.triangle-bottom-right {
+    transform: rotate(180deg) translate(-35px, -35px);
+    bottom: 0;
+    right: 0;
+}
+
+.logo {
+    width: 100px;
+    transition: transform 100ms ease-in-out;
+}
+
+.card-back:hover .logo {
+    transform: scale(1.1);
+}
+
+.mascot-start {
+    width: 700px;
+    position: relative;
+    top: 180px;
+}
+
+@media (max-width:600px) {
+    .game-container {
+        grid-template-columns: repeat(2, auto);
+    }
+    .game-info-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}

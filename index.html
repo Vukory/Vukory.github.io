@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" async></script>
+</head>
+
+<body>
+    <h1 class="page-title">Amazing Memory Game</h1>
+    <div class="overlay-text visible">
+        <!-- <img src="Assets/Images/python.png" alt="">  -->
+        Click to start
+        <div class="overlay-image-container"></div>
+        <img class="mascot-start" src="Assets/Images/elypiaStart.png" alt="">
+    </div>
+    </div>
+    <div id="victory-text" class="overlay-text">
+        Victory
+        <span class="overlay-text-small">Click to Restart</span>
+    </div>
+    <div class="game-container">
+        <div class="game-info-container">
+            <div class="game-info">
+                Score: <span id="score">0</span>
+            </div>
+            <div class="game-info">
+                Flips: <span id="flips">0</span>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-front">
+                <img class="triangle triangle-top-left" src="Assets/Images/triangle.png" alt="blue vector triangle in the corners of the card">
+                <img class="triangle triangle-top-right" src="Assets/Images/triangle.png" alt="blue vector triangle in the corners of the card">
+                <img class="triangle triangle-bottom-left" src="Assets/Images/triangle.png" alt="blue vector triangle in the corners of the card">
+                <img class="triangle triangle-bottom-right" src="Assets/Images/triangle.png" alt="blue vector triangle in the corners of the card">
+                <img class="logo" src="Assets/Images/logo2.png" alt="elypia logo">
+            </div>
+            <div class="card-face card-front ">
+                <img class="triangle triangle-top-left" src="Assets/Images/triangleBrown.png" alt="brown vector triangle in the corners of the card">
+                <img class="triangle triangle-top-right" src="Assets/Images/triangleBrown.png" alt="brown vector triangle in the corners of the card">
+                <img class="triangle triangle-bottom-left" src="Assets/Images/triangleBrown.png" alt="brown vector triangle in the corners of the card">
+                <img class="triangle triangle-bottom-right" src="Assets/Images/triangleBrown.png" alt="brown vector triangle in the corners of the card">
+                <img class="card-value" src="Assets/Images/cpp.png" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-front">
+                <img class="triangle triangle-top-left" src="Assets/Images/triangle.png" alt="blue vector triangle in the corners of the card">
+                <img class="triangle triangle-top-right" src="Assets/Images/triangle.png" alt="blue vector triangle in the corners of the card">
+                <img class="triangle triangle-bottom-left" src="Assets/Images/triangle.png" alt="blue vector triangle in the corners of the card">
+                <img class="triangle triangle-bottom-right" src="Assets/Images/triangle.png" alt="blue vector triangle in the corners of the card">
+                <img class="logo" src="Assets/Images/logo2.png" alt="elypia logo">
+            </div>
+            <div class="card-face card-front ">
+                <img class="triangle triangle-top-left" src="Assets/Images/triangleBrown.png" alt="brown vector triangle in the corners of the card">
+                <img class="triangle triangle-top-right" src="Assets/Images/triangleBrown.png" alt="brown vector triangle in the corners of the card">
+                <img class="triangle triangle-bottom-left" src="Assets/Images/triangleBrown.png" alt="brown vector triangle in the corners of the card">
+                <img class="triangle triangle-bottom-right" src="Assets/Images/triangleBrown.png" alt="brown vector triangle in the corners of the card">
+                <img class="card-value" src="Assets/Images/cpp.png" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-front">
+                <img class="triangle triangle-top-left" src="Assets/Images/triangle.png" alt="blue vector triangle in the corners of the card">
+                <img class="triangle triangle-top-right" src="Assets/Images/triangle.png" alt="blue vector triangle in the corners of the card">
+                <img class="triangle triangle-bottom-left" src="Assets/Images/triangle.png" alt="blue vector triangle in the corners of the card">
+                <img class="triangle triangle-bottom-right" src="Assets/Images/triangle.png" alt="blue vector triangle in the corners of the card">
+                <img class="logo" src="Assets/Images/logo2.png" alt="elypia logo">
+            </div>
+            <div class="card-face card-front ">
+                <img class="triangle triangle-top-left" src="Assets/Images/triangleBrown.png" alt="brown vector triangle in the corners of the card">
+                <img class="triangle triangle-top-right" src="Assets/Images/triangleBrown.png" alt="brown vector triangle in the corners of the card">
+                <img class="triangle triangle-bottom-left" src="Assets/Images/triangleBrown.png" alt="brown vector triangle in the corners of the card">
+                <img class="triangle triangle-bottom-right" src="Assets/Images/triangleBrown.png" alt="brown vector triangle in the corners of the card">
+                <img class="card-value" src="Assets/Images/csharp.png" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-front">
+                <img class="triangle triangle-top-left" src="Assets/Images/triangle.png" alt="blue vector triangle in the corners of the card">
+                <img class="triangle triangle-top-right" src="Assets/Images/triangle.png" alt="blue vector triangle in the corners of the card">
+                <img class="triangle triangle-bottom-left" src="Assets/Images/triangle.png" alt="blue vector triangle in the corners of the card">
+                <img class="triangle triangle-bottom-right" src="Assets/Images/triangle.png" alt="blue vector triangle in the corners of the card">
+                <img class="logo" src="Assets/Images/logo2.png" alt="elypia logo">
+            </div>
+            <div class="card-face card-front ">
+                <img class="triangle triangle-top-left" src="Assets/Images/triangleBrown.png" alt="brown vector triangle in the corners of the card">
+                <img class="triangle triangle-top-right" src="Assets/Images/triangleBrown.png" alt="brown vector triangle in the corners of the card">
+                <img class="triangle triangle-bottom-left" src="Assets/Images/triangleBrown.png" alt="brown vector triangle in the corners of the card">
+                <img class="triangle triangle-bottom-right" src="Assets/Images/triangleBrown.png" alt="brown vector triangle in the corners of the card">
+                <img class="card-value" src="Assets/Images/csharp.png" alt="">
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-back card-front">
+                <img class="triangle triangle-top-left" src="Assets/Images/triangle.png" alt="blue vector triangle in the corners of the card">
+                <img class="triangle triangle-top-right" src="Assets/Images/triangle.png" alt="blue vector triangle in the corners of the card">
+                <img class="triangle triangle-bottom-left" src="Assets/Images/triangle.png" alt="blue vector triangle in the corners of the card">
+                <img class="triangle triangle-bottom-right" src="Assets/Images/triangle.png" alt="blue vector triangle in the corners of the card">
+                <img class="logo" src="Assets/Images/logo2.png" alt="elypia logo">
+            </div>
+            <div class="card-face card-front ">
+                <img class="triangle triangle-top-left" src="Assets/Images/triangleBrown.png" alt="brown vector triangle in the corners of the card">
+                <img class="triangle triangle-top-right" src="Assets/Images/triangleBrown.png" alt="brown vector triangle in the corners of the card">
+                <img class="triangle triangle-bottom-left" src="Assets/Images/triangleBrown.png" alt="brown vector triangle in the corners of the card">
+                <img class="triangle triangle-bottom-right" src="Assets/Images/triangleBrown.png" alt="brown vector triangle in the corners of the card">
+                <img class="card-value" src="Assets/Images/java.png" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-front">
+                <img class="triangle triangle-top-left" src="Assets/Images/triangle.png" alt="blue vector triangle in the corners of the card">
+                <img class="triangle triangle-top-right" src="Assets/Images/triangle.png" alt="blue vector triangle in the corners of the card">
+                <img class="triangle triangle-bottom-left" src="Assets/Images/triangle.png" alt="blue vector triangle in the corners of the card">
+                <img class="triangle triangle-bottom-right" src="Assets/Images/triangle.png" alt="blue vector triangle in the corners of the card">
+                <img class="logo" src="Assets/Images/logo2.png" alt="elypia logo">
+            </div>
+            <div class="card-face card-front ">
+                <img class="triangle triangle-top-left" src="Assets/Images/triangleBrown.png" alt="brown vector triangle in the corners of the card">
+                <img class="triangle triangle-top-right" src="Assets/Images/triangleBrown.png" alt="brown vector triangle in the corners of the card">
+                <img class="triangle triangle-bottom-left" src="Assets/Images/triangleBrown.png" alt="brown vector triangle in the corners of the card">
+                <img class="triangle triangle-bottom-right" src="Assets/Images/triangleBrown.png" alt="brown vector triangle in the corners of the card">
+                <img class="card-value" src="Assets/Images/java.png" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-front">
+                <img class="triangle triangle-top-left" src="Assets/Images/triangle.png" alt="blue vector triangle in the corners of the card">
+                <img class="triangle triangle-top-right" src="Assets/Images/triangle.png" alt="blue vector triangle in the corners of the card">
+                <img class="triangle triangle-bottom-left" src="Assets/Images/triangle.png" alt="blue vector triangle in the corners of the card">
+                <img class="triangle triangle-bottom-right" src="Assets/Images/triangle.png" alt="blue vector triangle in the corners of the card">
+                <img class="logo" src="Assets/Images/logo2.png" alt="elypia logo">
+            </div>
+            <div class="card-face card-front ">
+                <img class="triangle triangle-top-left" src="Assets/Images/triangleBrown.png" alt="brown vector triangle in the corners of the card">
+                <img class="triangle triangle-top-right" src="Assets/Images/triangleBrown.png" alt="brown vector triangle in the corners of the card">
+                <img class="triangle triangle-bottom-left" src="Assets/Images/triangleBrown.png" alt="brown vector triangle in the corners of the card">
+                <img class="triangle triangle-bottom-right" src="Assets/Images/triangleBrown.png" alt="brown vector triangle in the corners of the card">
+                <img class="card-value" src="Assets/Images/python.png" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-front">
+                <img class="triangle triangle-top-left" src="Assets/Images/triangle.png" alt="blue vector triangle in the corners of the card">
+                <img class="triangle triangle-top-right" src="Assets/Images/triangle.png" alt="blue vector triangle in the corners of the card">
+                <img class="triangle triangle-bottom-left" src="Assets/Images/triangle.png" alt="blue vector triangle in the corners of the card">
+                <img class="triangle triangle-bottom-right" src="Assets/Images/triangle.png" alt="blue vector triangle in the corners of the card">
+                <img class="logo" src="Assets/Images/logo2.png" alt="elypia logo">
+            </div>
+            <div class="card-face card-front ">
+                <img class="triangle triangle-top-left" src="Assets/Images/triangleBrown.png" alt="brown vector triangle in the corners of the card">
+                <img class="triangle triangle-top-right" src="Assets/Images/triangleBrown.png" alt="brown vector triangle in the corners of the card">
+                <img class="triangle triangle-bottom-left" src="Assets/Images/triangleBrown.png" alt="brown vector triangle in the corners of the card">
+                <img class="triangle triangle-bottom-right" src="Assets/Images/triangleBrown.png" alt="brown vector triangle in the corners of the card">
+                <img class="card-value" src="Assets/Images/python.png" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-front">
+                <img class="triangle triangle-top-left" src="Assets/Images/triangle.png" alt="blue vector triangle in the corners of the card">
+                <img class="triangle triangle-top-right" src="Assets/Images/triangle.png" alt="blue vector triangle in the corners of the card">
+                <img class="triangle triangle-bottom-left" src="Assets/Images/triangle.png" alt="blue vector triangle in the corners of the card">
+                <img class="triangle triangle-bottom-right" src="Assets/Images/triangle.png" alt="blue vector triangle in the corners of the card">
+                <img class="logo" src="Assets/Images/logo2.png" alt="elypia logo">
+            </div>
+            <div class="card-face card-front ">
+                <img class="triangle triangle-top-left" src="Assets/Images/triangleBrown.png" alt="brown vector triangle in the corners of the card">
+                <img class="triangle triangle-top-right" src="Assets/Images/triangleBrown.png" alt="brown vector triangle in the corners of the card">
+                <img class="triangle triangle-bottom-left" src="Assets/Images/triangleBrown.png" alt="brown vector triangle in the corners of the card">
+                <img class="triangle triangle-bottom-right" src="Assets/Images/triangleBrown.png" alt="brown vector triangle in the corners of the card">
+                <img class="card-value" src="Assets/Images/ruby.png" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-front">
+                <img class="triangle triangle-top-left" src="Assets/Images/triangle.png" alt="blue vector triangle in the corners of the card">
+                <img class="triangle triangle-top-right" src="Assets/Images/triangle.png" alt="blue vector triangle in the corners of the card">
+                <img class="triangle triangle-bottom-left" src="Assets/Images/triangle.png" alt="blue vector triangle in the corners of the card">
+                <img class="triangle triangle-bottom-right" src="Assets/Images/triangle.png" alt="blue vector triangle in the corners of the card">
+                <img class="logo" src="Assets/Images/logo2.png" alt="elypia logo">
+            </div>
+            <div class="card-face card-front ">
+                <img class="triangle triangle-top-left" src="Assets/Images/triangleBrown.png" alt="brown vector triangle in the corners of the card">
+                <img class="triangle triangle-top-right" src="Assets/Images/triangleBrown.png" alt="brown vector triangle in the corners of the card">
+                <img class="triangle triangle-bottom-left" src="Assets/Images/triangleBrown.png" alt="brown vector triangle in the corners of the card">
+                <img class="triangle triangle-bottom-right" src="Assets/Images/triangleBrown.png" alt="brown vector triangle in the corners of the card">
+                <img class="card-value" src="Assets/Images/ruby.png" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-front">
+                <img class="triangle triangle-top-left" src="Assets/Images/triangle.png" alt="blue vector triangle in the corners of the card">
+                <img class="triangle triangle-top-right" src="Assets/Images/triangle.png" alt="blue vector triangle in the corners of the card">
+                <img class="triangle triangle-bottom-left" src="Assets/Images/triangle.png" alt="blue vector triangle in the corners of the card">
+                <img class="triangle triangle-bottom-right" src="Assets/Images/triangle.png" alt="blue vector triangle in the corners of the card">
+                <img class="logo" src="Assets/Images/logo2.png" alt="elypia logo">
+            </div>
+            <div class="card-face card-front ">
+                <img class="triangle triangle-top-left" src="Assets/Images/triangleBrown.png" alt="brown vector triangle in the corners of the card">
+                <img class="triangle triangle-top-right" src="Assets/Images/triangleBrown.png" alt="brown vector triangle in the corners of the card">
+                <img class="triangle triangle-bottom-left" src="Assets/Images/triangleBrown.png" alt="brown vector triangle in the corners of the card">
+                <img class="triangle triangle-bottom-right" src="Assets/Images/triangleBrown.png" alt="brown vector triangle in the corners of the card">
+                <img class="card-value" src="Assets/Images/swift.png" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-front">
+                <img class="triangle triangle-top-left" src="Assets/Images/triangle.png" alt="blue vector triangle in the corners of the card">
+                <img class="triangle triangle-top-right" src="Assets/Images/triangle.png" alt="blue vector triangle in the corners of the card">
+                <img class="triangle triangle-bottom-left" src="Assets/Images/triangle.png" alt="blue vector triangle in the corners of the card">
+                <img class="triangle triangle-bottom-right" src="Assets/Images/triangle.png" alt="blue vector triangle in the corners of the card">
+                <img class="logo" src="Assets/Images/logo2.png" alt="elypia logo">
+            </div>
+            <div class="card-face card-front ">
+                <img class="triangle triangle-top-left" src="Assets/Images/triangleBrown.png" alt="brown vector triangle in the corners of the card">
+                <img class="triangle triangle-top-right" src="Assets/Images/triangleBrown.png" alt="brown vector triangle in the corners of the card">
+                <img class="triangle triangle-bottom-left" src="Assets/Images/triangleBrown.png" alt="brown vector triangle in the corners of the card">
+                <img class="triangle triangle-bottom-right" src="Assets/Images/triangleBrown.png" alt="brown vector triangle in the corners of the card">
+                <img class="card-value" src="Assets/Images/swift.png" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
