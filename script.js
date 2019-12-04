@@ -31,13 +31,17 @@ class AudioController {
 class mixOrMatch {
     constructor(cards) {
         this.cardsArray = cards;
+        this.score = document.getElementById('score');
         this.ticker = document.getElementById('flips');
+        this.message = document.getElementById('matched-message-container');
         this.audioController = new AudioController();
     }
     startGame() {
         this.cardToCheck = null;
+        this.totalScore = 0;
         this.totalClicks = 0;
         this.matchedCards = [];
+        this.message.classList.add('visible');
         this.busy = true;
 
         setTimeout(() => {
@@ -48,12 +52,13 @@ class mixOrMatch {
 
         this.hideCards();
         this.ticker.innerText = this.totalClicks;
+        this.score.innerText = this.totalScore;
     }
 
     hideCards() {
         this.cardsArray.forEach(card => {
             card.classList.remove('visible');
-            // card.classList.remove('matched');
+            card.classList.remove('matched');
         });
     }
 
@@ -84,8 +89,10 @@ class mixOrMatch {
     cardMatched(card1, card2) {
         this.matchedCards.push(card1);
         this.matchedCards.push(card2);
-        // card1.classList.add('matched');
-        // card2.classList.add('matched');
+        card1.classList.add('matched');
+        card2.classList.add('matched');
+        this.totalScore++;
+        this.score.innerText = this.totalScore;
         this.audioController.match();
         if (this.matchedCards.length === this.cardsArray.length) {
             this.victory();
@@ -119,9 +126,9 @@ class mixOrMatch {
             }
 
         }
-        /*if the card is already flipped (matched)
-        an animation is happening
-        if the card that's flipped is already card to check it shouldn't be clicked*/
+        /**if the card is already flipped (matched);
+        an animation is happening or
+        if the card that's flipped is already a card to be checked it shouldn't be clicked*/
     canFlipCard(card) {
         return (!this.busy && !this.matchedCards.includes(card) && card !== this.cardToCheck);
     }

@@ -38,6 +38,74 @@ body {
     justify-content: space-between;
 }
 
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.message-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.tablet-img {
+    margin-top: 2em;
+    width: 300px;
+}
+
+#matched-message-container {
+    height: 400px;
+    margin: 0 2em 0 5em;
+    border: 3px solid #2984da;
+    border-radius: 10px;
+    padding: 1em;
+    font-family: Rounded;
+    box-shadow: 0 0 8px #2984da;
+    color: #aed0f0;
+    display: none;
+}
+
+.message {
+    display: none;
+}
+
+.intro-message {
+    display: flex;
+    align-items: center;
+}
+
+#matched-message-container.visible {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: appear 300ms forwards;
+}
+
+@keyframes appear {
+    from {
+        background-color: #1e4ca100;
+        width: 0px;
+        font-size: 0px;
+    }
+    to {
+        font-size: 1.3em;
+        width: 300px;
+        background-color: #0916419c;
+    }
+}
+
+.mascot {
+    margin-left: 50px;
+}
+
+.elypia-chan-mascot {
+    width: 500px;
+}
+
 .game-container {
     display: grid;
     margin: 20px;
@@ -122,23 +190,22 @@ body {
     }
 }
 
-
-/* .card.matched .card-value {
+.card.matched .card-value {
     animation: tilt 2s linear infinite 500ms;
 }
 
 @keyframes tilt {
     0%,
     100% {
-        transform: rotate(0);
+        opacity: 1;
     }
     25% {
-        transform: rotate(-10deg);
+        opacity: .8;
     }
     75% {
-        transform: rotate(10deg);
+        opacity: .6;
     }
-} */
+}
 
 .card-back {
     border-color: #aaccffff;
